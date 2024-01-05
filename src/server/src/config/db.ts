@@ -1,27 +1,26 @@
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-// mongoose.connect('mongodb://localhost:27017/Charity');
+mongoose.connect('mongodb://localhost:27017/Charity');
 
-// console.log('Connected to MongoDB');
-
-// import { donationSchema, customerSchema } from '../models/donationModel';
-
-
-// const donation = mongoose.Schema(
-//     donationSchema,
-//     {
-//         timestamps: true
-//     }
-// );
+console.log('Connected to MongoDB');
+import { customerSchema, } from '../models/customerModel';
+import { donationSchema, } from '../models/donationModel';
 
 
-// const customer = mongoose.Schema(
-//     customerSchema,
-//     {
-//         timestamps: true
-//     }
-// );
+mongoose.Schema(
+    donationSchema,
+    {
+        timestamps: true
+    }
+);
+export const donationModel = mongoose.model('Donation', donationSchema);
 
-// const customerModel = mongoose.model('Customer', customerSchema);
-// module.exports = customerModel;
+
+mongoose.Schema(
+    customerSchema,
+    {
+        timestamps: true
+    }
+);
+export const customerModel = mongoose.model('Customer', customerSchema);
 

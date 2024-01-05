@@ -14,17 +14,22 @@ async function start() {
     app.use(express.json());
     app.use(express.urlencoded({ extended: false }));
 
+
+
     // body parser
     app.use(bodyParser.json({
       limit: '500kb'
     }));
 
+
+
     // Routes
     app.get('/', (req: any, res: any) => {
       res.send({ message: "Server is up!" });
     });
-    // app.use('/customers', require('./routes/customerRoute'));
+    app.use('/customers', require('./routes/customerRoute'));
     app.use('/donation', require('./routes/donationRoute'));
+
 
   } catch (error) {
     console.log(error);

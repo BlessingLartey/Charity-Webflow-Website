@@ -1,8 +1,9 @@
 const express = require('express');
-const Donation = require('../models/donationModel');
+import { donationModel } from '../config/db'
 const app = express();
 
 app.use(express.json());
+const Donation = donationModel
 
 
 
@@ -12,11 +13,12 @@ export async function createDonations(req: any, res: any) {
         const donation = await Donation.create(req.body)
         return res.status(200).json({
             message: "Donations created successfully",
-            donation: donation});
+            donation: donation
+        });
 
     } catch (error) {
         console.error(error);
-        return res.status(500).json({message: error});
+        return res.status(500).json({ message: error });
     }
 }
 
@@ -27,50 +29,50 @@ export async function getAllDonations(req: any, res: any) {
         return res.status(200).json({
             message: "Donations retrieved",
             customers: result
-      });
+        });
 
     }
-  catch (error) {
-      console.error(error);
-      return res.status(500).json({ error: error });
+    catch (error) {
+        console.error(error);
+        return res.status(500).json({ error: error });
     }
-  }
+}
 
 
-  export async function getOneDonation(req: any, res: any) {
+export async function getOneDonation(req: any, res: any) {
     try {
-        const {id} = req.params;
+        const { id } = req.params;
         const result = await Donation.findById(id);
         return res.status(200).json({
             message: "Donations retrieved",
             customers: result
-      });
+        });
 
     }
-  catch (error) {
-      console.error(error);
-      return res.status(500).json({ error: error });
+    catch (error) {
+        console.error(error);
+        return res.status(500).json({ error: error });
     }
-  }
+}
 
 
 
-  export async function editDonation(req: any, res: any) {
+export async function editDonation(req: any, res: any) {
     try {
-        const {id} = req.params;
+        const { id } = req.params;
         const result = await Donation.findByIdAndUpdate(id, req.body);
         if (!result) {
-            return res.status(404).json({message: `Cannot find any donation with id: ${id}` });
+            return res.status(404).json({ message: `Cannot find any donation with id: ${id}` });
         }
         res.status(200).json({
             message: "Donations edited successfully",
             customers: result
-      });
+        });
 
     }
-  catch (error) {
-      console.error(error);
-      res.status(500).json({ error: error });
+    catch (error) {
+        console.error(error);
+        res.status(500).json({ error: error });
     }
 }
 
