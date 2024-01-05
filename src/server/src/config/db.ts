@@ -6,7 +6,7 @@ console.log('Connection is established!');
 import { customerSchema, } from '../models/customerModel';
 import { donationSchema, } from '../models/donationModel';
 
-
+// Creating schema for donation
 mongoose.Schema(
     donationSchema,
     {
@@ -15,7 +15,7 @@ mongoose.Schema(
 );
 export const donationModel = mongoose.model('Donation', donationSchema);
 
-
+// Creating schema for customer
 mongoose.Schema(
     customerSchema,
     {
