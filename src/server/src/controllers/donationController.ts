@@ -9,11 +9,6 @@ app.use(express.json());
 export async function createDonations(req: any, res: any) {
     try {
 
-        const existingDonations = await Donation.findOne({email: req.body.email.toLowerCase()})
-        if (existingDonations) {
-            return res.status(406).json({message: 'Donation already exists!'});
-        }
-
         const donation = await Donation.create(req.body)
         return res.status(200).json({
             message: "Donations created successfully",

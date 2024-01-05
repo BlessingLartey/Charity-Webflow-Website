@@ -4,11 +4,11 @@ mongoose.connect('mongodb://localhost:27017/Charity');
 
 console.log('Connected to MongoDB');
 
-export const donationSchema =
+const donationSchema = mongoose.Schema(
     {
         title: {
             type: String,
-            unique: true,
+            unique: true, // Set to true to enforce uniqueness
             required: [true, 'Donation title cannot be empty!']
         },
         raiseTotal: {
@@ -25,30 +25,11 @@ export const donationSchema =
             type: String,
             required: [true, 'Donation image cannot be empty!']
         },
-    }
-
-
-
-
-export const customerSchema =
+    },
     {
-        name: {
-            type: String,
-            required: [true, 'Customer name cannot be empty!']
-        },
-        email: {
-            type: String,
-            unique: true,
-            required: [true, 'Customer email cannot be empty!'],
-        },
-        phone: {
-            type: String,
-            required: [true, 'Customer phone Number cannot be empty!'],
-            default: 0
-        },
-        address: {
-            type: String,
-            required: [true, 'Customer image cannot be empty!']
-        },
+        timestamps: true
     }
+);
 
+const donationModel = mongoose.model('Donation', donationSchema);
+module.exports = donationModel;
