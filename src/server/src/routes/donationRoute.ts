@@ -5,7 +5,7 @@ const express  = require('express');
 const router = express.Router();
 
 
-console.log('donation route');
+console.log('Donation route is available');
 
 router.get('/', getAllDonations);
 router.get('/:id', getOneDonation);

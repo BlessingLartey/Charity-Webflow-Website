@@ -5,7 +5,7 @@ const express  = require('express');
 
 const router = express.Router();
 
-console.log('customers route');
+console.log('Customers route is available');
 
 router.get('/', getCustomersController);
 router.post('/', createCustomerController);
