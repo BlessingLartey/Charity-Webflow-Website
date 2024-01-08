@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+}
+
+.header {
+  height: 115px;
+  background-color: #fff;
+}
+
+.topNav {
+  background-color: #77d7d3;
+  height: 45px;
+}
+
+.bannerOuter {
+  background-image: url(../images/bannerbg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 620px;
+}
+
+.banner {
+  width: 500px;
+  margin-left: 40px;
+  padding-top: 40px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.aboutUsBoxes {
+  width: 900px;
+  height: 815px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: -65px;
+}
+
+.aUI {
+  display: flex;
+  height: 300px;
+}
+
+.aUIbox1 {
+  background-color: #77d7d3;
+  width: 300px;
+}
+.aUIbox2 {
+  background-color: #2e4049;
+  width: 300px;
+}
+.aUIbox3 {
+  background-image: url(../images/videopic.png);
+  width: 300px;
+}
+
+.aUM {
+  display: flex;
+  height: 400px;
+}
+
+.aUMbox1 {
+  background-color: #77d7d3;
+  width: 450px;
+}
+.aUMbox2 {
+  background-color: blue;
+  width: 450px;
+}
+
+.causes {
+  height: 900px;
+  background-color: antiquewhite;
+}
+
+.howWeHelp {
+  height: 900px;
+  background-image: url(../images/Photo2.png);
+  opacity: 20%;
+}
