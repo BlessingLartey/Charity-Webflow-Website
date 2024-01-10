@@ -4,6 +4,8 @@ import Causes from "../components/Causes/Causes";
 import Events from "../components/Events/Events";
 import HowWeHelp from "../components/HowWeHelp/HowWeHelp";
 import Projects from "../components/Project/Projects";
+// import Projects from "../clients/components/Project/Projects";
+
 
 function LandingPage() {
   return (
