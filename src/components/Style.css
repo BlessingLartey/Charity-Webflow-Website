@@ -10,10 +10,15 @@
 .topNav {
   background-color: #77d7d3;
   height: 45px;
+  display: flex;
+  gap: 60rem;
+}
+.topNavnxt {
+  width: 90%;
 }
 
 .bannerOuter {
-  background-image: url(../images/bannerbg.png);
+  background-image: url(../assets/images/bannerbg.png);
   background-size: 100%;
   background-repeat: no-repeat;
   height: 620px;
@@ -52,7 +57,7 @@
   width: 300px;
 }
 .aUIbox3 {
-  background-image: url(../images/videopic.png);
+  background-image: url(../assets/images/abtvideo.png);
   width: 300px;
 }
 
@@ -76,7 +81,9 @@
 }
 
 .howWeHelp {
-  height: 900px;
-  background-image: url(../images/Photo2.png);
-  opacity: 20%;
+  height: 700px;
+  background-image: linear-gradient(#2e4049e8, #2e4049e8),
+    url(../assets/images/helpbg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }

@@ -1,12 +1,27 @@
-import './App.css'
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import "./components/Style.css";
+import MainPageLayout from "./pages/MainPageLayout";
+import LandingPage from "./pages/LandingPage";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<MainPageLayout />}>
+      <Route index element={<LandingPage />}></Route>
+    </Route>
+  )
+);
 
 function App() {
-
   return (
-    <h1 className="text-3xl font-bold text-blue-800">
-      Start Here!
-    </h1>
-  )
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
-export default App
+export default App;
