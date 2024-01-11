@@ -4,9 +4,9 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import "./components/Style.css";
-import MainPageLayout from "./pages/MainPageLayout";
-import LandingPage from "./pages/LandingPage";
+import "./clients/components/Style.css";
+import MainPageLayout from "../src/clients/pages/MainPageLayout";
+import LandingPage from "../src/clients/pages/LandingPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
