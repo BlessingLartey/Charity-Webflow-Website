@@ -1,12 +1,8 @@
-import { useState } from 'react';
 import logo from '../../assets/svg/logo.svg'
 import TopNav from "./TopNav";
 import "../Style.css";
 
 function Header() {
-  const [menuOpen] = useState(false);
-
-
 
   return (
     <>
@@ -15,48 +11,46 @@ function Header() {
           <TopNav />
         </div>
         <div className="bg-white">
-          <nav className="flex justify-between items-center w-[92%] mx-auto">
+          <nav className="flex justify-between items-center h-16 mr-[16%] ml-[18%]">
             <div>
               <img
-                className="flex items-center w-32 cursor-pointer ml-[20%]"
+                className="flex items-center w-32 cursor-pointer"
                 src={logo}
                 alt="..."
               />
             </div>
             <div
-              className={`nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-${menuOpen ? '0' : '-100%'
-                } md:w-auto w-full flex items-center px-5`}
             >
               <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
                 <li>
                   <a className="hover:text-gray-500" href="#">
-                    Products
+                    Home
                   </a>
                 </li>
                 <li>
                   <a className="hover:text-gray-500" href="#">
-                    Solution
+                    About Us
                   </a>
                 </li>
                 <li>
                   <a className="hover:text-gray-500" href="#">
-                    Resource
+                    Pages
                   </a>
                 </li>
                 <li>
                   <a className="hover:text-gray-500" href="#">
-                    Developers
+                    Events
                   </a>
                 </li>
                 <li>
                   <a className="hover:text-gray-500" href="#">
-                    Pricing
+                    Contacts
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="flex items-center gap-6">
-              <button className="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">
+            <div className="flex items-center">
+              <button className="bg-[#FF6D6D] text-white px-5 py-2 rounded-full hover:bg-[#fa5a5a]">
                 Sign in
               </button>
             </div>
