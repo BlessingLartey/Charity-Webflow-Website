@@ -18,10 +18,9 @@
 }
 
 .bannerOuter {
-  background-image: url(../assets/images/bannerbg.png);
-  background-size: 100%;
+  background-image: url(../assets/images/banner.png);
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 620px;
 }
 
 .banner {

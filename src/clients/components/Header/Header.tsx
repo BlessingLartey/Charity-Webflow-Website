@@ -10,7 +10,7 @@ function Header() {
         <div>
           <TopNav />
         </div>
-        <div className="bg-white">
+        <div className="bg-white h-32">
           <nav className="flex justify-between items-center h-16 mr-[16%] ml-[18%]">
             <div>
               <img
