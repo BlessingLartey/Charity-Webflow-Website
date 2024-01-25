@@ -23,14 +23,6 @@
   background-repeat: no-repeat;
 }
 
-.banner {
-  width: 500px;
-  margin-left: 40px;
-  padding-top: 40px;
-  color: #fff;
-  font-weight: 900;
-}
-
 .aboutUsBoxes {
   width: 900px;
   height: 815px;
@@ -85,4 +77,8 @@
     url(../assets/images/helpbg.png);
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+.font-serif {
+  font-family: "Sue Ellen Francisco";
 }

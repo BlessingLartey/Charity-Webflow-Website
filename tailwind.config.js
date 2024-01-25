@@ -1,14 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        work_sans: ['Work+Sans']
-      }
+        ellen: ["sue-ellen", "sans-serif"],
+      },
     },
   },
   plugins: [],
-}
+};
